@@ -71,12 +71,10 @@ class SyliaToJobs():
         print(sys.argv[argX])
         if sys.argv[argX].startswith("file="):
             self.file   = sys.argv[argX].replace("file=", "")
-            print("file: "+self.file)
         if sys.argv[argX].startswith("dir="):
             self.folder = sys.argv[argX].replace("dir=", "")
             if not self.folder.endswith("/"):
                 self.folder = self.folder+"/"
-            print("folder: "+self.folder)
             
             
     def getFilename(self, zeile, jobHead, stringtoreplace):
