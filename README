@@ -1,0 +1,8 @@
+Dieses Programm sucht verbindet alle VirtualDub-Skripte (*.syl) in einem Verzeichnis zu einer großen VirtualDub-Jobsdatei.
+
+Wenn man es ohne Parameter aufruft "./syliatojobs.py", dann wird das aktuelle Verzeichnis durchsucht und eine Datei syliatojobs.jobs erzeugt.
+Sollte diese Datei schon existieren, dann wird diese Datei nicht überschrieben, sondern das Programm wird mit einer Infomeldung darüber beendet.
+
+Ausserdem kann man dem Programm Parameter übergeben. Bekannte sind "dir=X" und "file=Y".
+X gibt das Verzeichnis an in welchem nach den Skripten gesucht wird und Y die Datei welche erstellt werden soll. Aktuell wird die Datei Y auch im Verzeichnis X erstellt.
+Es kann kein, ein oder beide Parameter in beliebiger Reihenfolge angegeben werden.

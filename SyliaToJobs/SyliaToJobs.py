@@ -44,7 +44,7 @@ class SyliaToJobs():
         '''
         Constructor
         '''
-        self.file = "jobs.jobs"
+        self.file = "syliatojobs.jobs"
         self.folder = "."
         if len(sys.argv)>1:
             print(">1")
