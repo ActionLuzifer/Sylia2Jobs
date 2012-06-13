@@ -111,11 +111,19 @@ class SyliaToJobs():
         
 
     def run(self):
-        # Sylia-Dateien suchen
-        sylfiles = self.getListOfSyliaFiles()
-        # Inhalte der Sylia-Dateien in einen Text (Jobs) einfügen
-        if len(sylfiles):
-            self.concatenateSyls(sylfiles)
-            
-        # Header und Footer an Jobs anlegen
-        # Jobs-Datei speichern
+        # check ob zu schreibende Datei noch nicht existiert, wenn doch -> abbruch
+        if os.path.exists(self.folder+self.file):
+            print("ERROR: Datei existiert bereits")
+        else:
+            # Sylia-Dateien suchen
+            sylfiles = self.getListOfSyliaFiles()
+            if len(sylfiles):
+                # Inhalte der Sylia-Dateien in einen Text (Jobs) einfügen
+                jobs, anzahljobs = self.concatenateSyls(sylfiles)
+                
+                # Header und Footer an Jobs anlegen
+                jobs = self._JOBS_HEADER.replace(self.ANZAHLJOBS, repr(anzahljobs)) + jobs + self._JOBS_FOOTER
+                
+                # Jobs-Datei speichern
+                file = open(self.folder+self.file, 'w')
+                file.write(jobs)
