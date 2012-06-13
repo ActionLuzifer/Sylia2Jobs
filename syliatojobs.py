@@ -1,28 +1,17 @@
+#!/usr/bin/python3
+
 '''
 Created on 13.06.2012
 
 @author: duncanmcleod
 '''
 
-import os
 import sys
 
-def getListOfSyliaFiles(path):
-    files = os.listdir(path)
-    files=[filename for filename in files if filename.endswith("syl")]
-    files.sort()
-    return files
+from SyliaToJobs.SyliaToJobs import SyliaToJobs
 
 if __name__ == '__main__':
-    if len(sys.argv)>1:
-        pass
-        print(sys.argv[0])
-        print(sys.argv[1])
-    # Sylia-Dateien suchen
-    # Inhalte der Sylia-Dateien in einen Text (Jobs) einfügen
-        # Header und Footer drumherum legen
-    # Header und Footer an Jobs anlegen
-    # Jobs-Datei speichern
-    pass
+    stj = SyliaToJobs(sys.argv)
+    stj.run()
 
 
