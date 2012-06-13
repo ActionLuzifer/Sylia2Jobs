@@ -3,7 +3,7 @@
 '''
 Created on 13.06.2012
 
-@author: duncanmcleod
+@author: ActionLuzifer
 '''
 
 import sys
