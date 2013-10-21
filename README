@@ -1,4 +1,4 @@
-Dieses Programm sucht verbindet alle VirtualDub-Skripte (*.syl) in einem Verzeichnis zu einer großen VirtualDub-Jobsdatei.
+Dieses Programm sucht alle VirtualDub-Skripte (*.syl) in einem Verzeichnis und verbindet diese zu einer großen VirtualDub-Jobsdatei.
 
 Wenn man es ohne Parameter aufruft "./syliatojobs.py", dann wird das aktuelle Verzeichnis durchsucht und eine Datei syliatojobs.jobs erzeugt.
 Sollte diese Datei schon existieren, dann wird diese Datei nicht überschrieben, sondern das Programm wird mit einer Infomeldung darüber beendet.
